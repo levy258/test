@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>QQ分享工具，图标分享</title>
+</head>
+	
+<!--输入框-->
+<input id="url" value="https://space.bilibili.com/50174924">
+你的分享链接
+</input>
+<br>
+<input id="pic" value="https://i2.hdslb.com/bfs/face/8a062d32d309f158bb495d330c6bae338c453993.jpg_64x64.jpg">
+你的分享图片地址(QQ)
+</input>
+<br>
+<input id="title" value="哔哩哔哩up主Levy258欢迎您">
+你的标题内容（QQ）
+</input>
+<br>
+<input id="summary" value="如果对您有帮助还请点赞投币分享关注，谢谢您的支持">
+你的描述内容（QQ）
+</input>
+<br>
+<!-- <input id="site" value="哔哩哔哩">你的来源类别</input>
+<br> -->
+<!--按钮激活input内容-->
+<button ID="button" onclick="p=document.getElementById('pic').value; u=document.getElementById('url').value; t=document.getElementById('title').value; s=document.getElementById('summary').value; z=document.getElementById('site').value">载入修改内容</button>
+<!-- 需要更新的内容及其位置 -->
+<script>
+	var p=document.getElementById('pic').value;u=document.getElementById('url').value;t=document.getElementById('title').value;s=document.getElementById('summary').value;z=document.getElementById('site').value;//p=图片 u=链接地址 t标题 s描述  QQ好友
+	function share(){  
+			document.getElementById('test3').href="https://connect.qq.com/widget/shareqq/index.html?url="+u+"?share_medium=android&share_source=qq&bbid=BB167522-6F42-4323-8948-72A5A79EE49B31470infoc&ts=1577628544902&desc=&title="+t+"&summary="+s+"&pics="+p+"&flash=&site=&style=201&width=32&height=32";      //QQ分享链接                    
+			document.getElementById('test1').href="https://twitter.com/intent/tweet?url="+u+"&text=&via=YouTube&related=YouTube,YouTubeTrends,YTCreators";	//推特分享链接
+			document.getElementById('test2').href="https://www.facebook.com/dialog/share?app_id=87741124305&href="+u+"&feature=share&display=popup&redirect_uri=https://www.youtube.com/facebook_redirect";	//脸书分享链接
+    		}
+	
+</script>
+<!--/*属性修改*/-->
+<!--<script>
+	var p ,u,t,s,z //p=图片 u=链接地址 t标题 s描述  QQ好友
+	function twitter()
+	{document.getElementById('test1').href="https://twitter.com/intent/tweet?url=https://www.bilibili.com/video/"+u+"&text=&via=YouTube&related=YouTube,YouTubeTrends,YTCreators"}
+
+	
+	function qq()
+	 {document.getElementById('test3').href="https://connect.qq.com/widget/shareqq/index.html?url="+u+"?share_medium=app&share_source=qzone&bbid=4EC06A24-BBB1-40A1-A78B-E21E216BF112110265infoc&ts=1563945340003&desc=喜欢就点我⬆&title="+t+" &summary="+s+"&pics="+p+"&flash=&"+z+"=&style=201"}
+
+	function facebook()
+	 {document.getElementById('test2').href="https://www.facebook.com/dialog/share?app_id=87741124305&href="+u+"/&feature=share&display=popup&redirect_uri=https://www.youtube.com/facebook_redirect"}
+</script>-->
+
+<!--页面右侧分享按钮-->
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"欢迎来到Levy258的湢悡间","bdMini":"2","bdMiniList":false,"bdPic":"http://132.232.203.13/images/130822t3n72wzz2kwtl172.png","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"0","bdPos":"right","bdTop":"99.5"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<body>
+<!--分享--> 
+<!-- 分享到QQ --> 
+<a id="test3" target="_blank" href="https://connect.qq.com/widget/shareqq/index.html?url=https://www.bilibili.com/video/av80646367?share_medium=android&share_source=qq&bbid=BB167522-6F42-4323-8948-72A5A79EE49B31470infoc&ts=1577628544902&desc=&title=&summary=&pics=&flash=&site=&style=201&width=32&height=32"><button onClick="share()">分享到QQ好友</button></a>
+<!-- 分享到TWITTER --> 
+<a id="test1" target="_blank" href="https://twitter.com/intent/tweet?url=https://www.bilibili.com/video/av7160925&text=&via=YouTube&related=YouTube,YouTubeTrends,YTCreators"><button onClick="share();">分享到TWITTER</button></a> 
+<!-- 分享到FACEBOOK --> 
+<a id="test2" target="_blank" href="https://www.facebook.com/dialog/share?app_id=87741124305&href=https://www.bilibili.com/video/av71926313/&feature=share&display=popup&redirect_uri=https://www.youtube.com/facebook_redirect"><button onClick="share()">分享到FACEBOOK</button></a> 
+
+<p style="color: red">输入链接地址必须完整（包括http前缀,没有你自己加上）</p>
+<!-- <iframe src="https://tools.imiku.me/user/verify_mail/" width="100%" height="400px" scrolling="no" style="border:0px;"></iframe> -->
+</body>
+</html>
